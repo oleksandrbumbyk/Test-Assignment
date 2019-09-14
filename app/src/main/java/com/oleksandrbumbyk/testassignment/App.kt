@@ -1,5 +1,14 @@
 package com.oleksandrbumbyk.testassignment
 
-import android.app.Application
+import com.oleksandrbumbyk.testassignment.presentation.injection.DaggerApplication
+import timber.log.Timber
 
-class App : Application()
+class App : DaggerApplication() {
+
+    override fun onCreate() {
+        super.onCreate()
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
+    }
+}
