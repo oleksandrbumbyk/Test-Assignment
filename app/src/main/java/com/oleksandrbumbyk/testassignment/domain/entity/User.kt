@@ -4,27 +4,27 @@ import com.google.gson.annotations.SerializedName
 
 data class User(
     @SerializedName("nat")
-    val nat: String? = "",
+    var nat: String? = "",
     @SerializedName("gender")
-    val gender: String? = "",
+    var gender: String? = "",
     @SerializedName("phone")
-    val phone: String? = "",
+    var phone: String? = "",
     @SerializedName("dob")
-    val dob: UserDob?,
+    var dob: UserDob?,
     @SerializedName("name")
-    val name: UserName?,
+    var name: UserName?,
     @SerializedName("registered")
-    val registered: UserRegistered?,
+    var registered: UserRegistered?,
     @SerializedName("location")
-    val location: UserLocation?,
+    var location: UserLocation?,
     @SerializedName("id")
-    val id: UserId?,
+    var id: UserId?,
     @SerializedName("login")
-    val login: UserLogin?,
+    var login: UserLogin?,
     @SerializedName("cell")
-    val cell: String? = "",
+    var cell: String? = "",
     @SerializedName("email")
-    val email: String? = "",
+    var email: String? = "",
     @SerializedName("picture")
-    val picture: UserPicture?
+    var picture: UserPicture?
 )

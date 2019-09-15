@@ -5,7 +5,7 @@ import com.oleksandrbumbyk.testassignment.domain.entity.User
 
 data class UsersResponse(
     @SerializedName("results")
-    val results: List<User>?,
+    var results: List<User>?,
     @SerializedName("info")
-    val info: UsersResponseInfo?
+    var info: UsersResponseInfo?
 )

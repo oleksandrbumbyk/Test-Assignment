@@ -4,15 +4,13 @@ import com.google.gson.annotations.SerializedName
 
 data class UserLocation(
     @SerializedName("city")
-    val city: String? = "",
+    var city: String? = "",
     @SerializedName("street")
-    val street: String? = "",
+    var street: String? = "",
     @SerializedName("timezone")
-    val timezone: UserTimezone?,
-    @SerializedName("postcode")
-    val postcode: Int? = 0,
+    var timezone: UserTimezone?,
     @SerializedName("coordinates")
-    val coordinates: UserCoordinates?,
+    var coordinates: UserCoordinates?,
     @SerializedName("state")
-    val state: String? = ""
+    var state: String? = ""
 )

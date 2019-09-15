@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class UserTimezone(
     @SerializedName("offset")
-    val offset: String? = "",
+    var offset: String? = "",
     @SerializedName("description")
-    val description: String? = ""
+    var description: String? = ""
 )

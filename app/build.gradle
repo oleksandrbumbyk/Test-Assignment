@@ -37,6 +37,11 @@ dependencies {
 
     //appcompat
     implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0-beta04"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
+    implementation "androidx.annotation:annotation:1.1.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02"
 
     //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -62,4 +67,18 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:2.21"
     kapt "com.google.dagger:dagger-android-processor:2.21"
 
+    //navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.2.0-alpha02"
+    implementation "androidx.navigation:navigation-ui-ktx:2.2.0-alpha02"
+    implementation "androidx.navigation:navigation-runtime-ktx:2.2.0-alpha02"
+
+    //glide
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+    kapt "com.github.bumptech.glide:compiler:4.9.0"
+
+    //lifecycle
+    implementation "android.arch.lifecycle:runtime:2.0.0-rc01"
+    implementation "android.arch.lifecycle:extensions:2.0.0-rc01"
+    implementation "android.arch.lifecycle:reactivestreams:2.0.0-rc01"
+    kapt "android.arch.lifecycle:compiler:2.0.0-rc01"
 }

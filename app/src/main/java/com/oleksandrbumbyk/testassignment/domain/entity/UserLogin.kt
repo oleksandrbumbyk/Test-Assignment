@@ -4,17 +4,17 @@ import com.google.gson.annotations.SerializedName
 
 data class UserLogin(
     @SerializedName("sha1")
-    val sha1: String? = "",
+    var sha1: String? = "",
     @SerializedName("password")
-    val password: String? = "",
+    var password: String? = "",
     @SerializedName("salt")
-    val salt: String? = "",
+    var salt: String? = "",
     @SerializedName("sha256")
-    val sha256: String? = "",
+    var sha256: String? = "",
     @SerializedName("uuid")
-    val uuid: String? = "",
+    var uuid: String? = "",
     @SerializedName("username")
-    val username: String? = "",
+    var username: String? = "",
     @SerializedName("md5")
-    val md: String? = ""
+    var md: String? = ""
 )

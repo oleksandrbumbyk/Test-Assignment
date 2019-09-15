@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class UserName(
     @SerializedName("last")
-    val last: String? = "",
+    var last: String? = "",
     @SerializedName("title")
-    val title: String? = "",
+    var title: String? = "",
     @SerializedName("first")
-    val first: String? = ""
+    var first: String? = ""
 )

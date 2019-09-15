@@ -1,5 +1,6 @@
-package com.oleksandrbumbyk.testassignment
+package com.oleksandrbumbyk.testassignment.presentation
 
+import com.oleksandrbumbyk.testassignment.BuildConfig
 import com.oleksandrbumbyk.testassignment.presentation.injection.DaggerApplication
 import timber.log.Timber
 

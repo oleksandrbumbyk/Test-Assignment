@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class UserRegistered(
     @SerializedName("date")
-    val date: String? = "",
+    var date: String? = "",
     @SerializedName("age")
-    val age: Int? = 0
+    var age: Int? = 0
 )

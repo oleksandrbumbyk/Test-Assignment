@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class UserPicture(
     @SerializedName("thumbnail")
-    val thumbnail: String? = "",
+    var thumbnail: String? = "",
     @SerializedName("large")
-    val large: String? = "",
+    var large: String? = "",
     @SerializedName("medium")
-    val medium: String? = ""
+    var medium: String? = ""
 )
