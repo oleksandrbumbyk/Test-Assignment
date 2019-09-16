@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.oleksandrbumbyk.testassignment.R
+import com.oleksandrbumbyk.testassignment.presentation.navigation.Navigator
 import com.oleksandrbumbyk.testassignment.presentation.util.lazyThreadSafetyNone
 import com.oleksandrbumbyk.testassignment.presentation.viewmodel.BaseAndroidViewModel
 import dagger.android.support.DaggerAppCompatActivity
@@ -25,6 +26,9 @@ abstract class BaseFragment<V : BaseAndroidViewModel> : DaggerFragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    @Inject
+    lateinit var navigator: Navigator
 
     open val orientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 

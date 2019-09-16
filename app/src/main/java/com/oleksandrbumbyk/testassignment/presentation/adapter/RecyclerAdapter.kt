@@ -20,7 +20,7 @@ class RecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (position >= itemCount - THRESHHOLD) loadMoreListener.loadMoreItems()
+        if (position >= itemCount - THRESHOLD) loadMoreListener.loadMoreItems()
         val item = getItem(position)
         when (item.type) {
             BaseItemTypeEnum.USER -> (holder as UserViewHolder).bind(item as UserItem)

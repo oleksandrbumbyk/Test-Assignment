@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="#fafafa"
         app:navigationIcon="@drawable/ic_close_dark"
-        app:title="" />
+        app:title="@string/home" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"

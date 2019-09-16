@@ -19,9 +19,9 @@ class UserViewHolder(itemView: View, private val listener: ItemListener) : Recyc
         this.item = item
         UserBinder.bindImage(itemView.context, itemView.ivAvatar, item.user)
         UserBinder.bindAge(itemView.context, itemView.tvAge, item.user)
-        UserBinder.bindLocation(itemView.tvLocation, item.user)
+        UserBinder.bindLocation(itemView.context, itemView.tvLocation, item.user)
         UserBinder.bindName(itemView.tvName, item.user)
         UserBinder.bindEmail(itemView.tvEmail, item.user)
-        UserBinder.bindPhone(itemView.tvPhone, item.user)
+        UserBinder.bindPhone(itemView.context, itemView.tvPhone, item.user)
     }
 }

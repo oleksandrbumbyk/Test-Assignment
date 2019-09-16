@@ -6,7 +6,7 @@ import com.oleksandrbumbyk.testassignment.presentation.adapter.item.BaseItem
 abstract class BaseRecyclerAdapter<V : RecyclerView.ViewHolder> : RecyclerView.Adapter<V>() {
 
     companion object {
-        const val THRESHHOLD = 5
+        const val THRESHOLD = 5
     }
 
     private var items = mutableListOf<BaseItem>()

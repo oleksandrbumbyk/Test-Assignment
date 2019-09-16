@@ -7,8 +7,10 @@ import com.oleksandrbumbyk.testassignment.R
 import com.oleksandrbumbyk.testassignment.domain.entity.User
 import com.oleksandrbumbyk.testassignment.domain.interactor.UserUseCase
 import com.oleksandrbumbyk.testassignment.presentation.adapter.item.BaseItem
+import com.oleksandrbumbyk.testassignment.presentation.util.SingleLiveData
 import com.oleksandrbumbyk.testassignment.presentation.viewmodel.mapper.UserMapper
 import io.reactivex.disposables.Disposable
+import io.reactivex.observers.DisposableCompletableObserver
 import io.reactivex.observers.DisposableObserver
 import timber.log.Timber
 
@@ -19,6 +21,7 @@ class HomeViewModel(
 ) : BaseAndroidViewModel(context.applicationContext as Application) {
 
     val list = MutableLiveData<MutableList<BaseItem>>()
+    val userSelectResult = SingleLiveData<Boolean>()
 
     private val seed = "abc"
     private val firstPage = 0
@@ -42,6 +45,8 @@ class HomeViewModel(
         currentPage++
         makePagination()
     }
+
+    fun selectUser(user: User) = addDisposable(selectUserDisposable(user))
 
     private fun makePagination() {
         userDisposable = addDisposable(usersDisposable(seed, currentPage))
@@ -70,6 +75,19 @@ class HomeViewModel(
                 }
 
                 override fun onComplete() {}
+            })
+    }
+
+    private fun selectUserDisposable(user: User): Disposable {
+        return userUseCase.selectUser(user)
+            .subscribeWith(object : DisposableCompletableObserver() {
+                override fun onComplete() {
+                    userSelectResult.postValue(true)
+                }
+
+                override fun onError(e: Throwable) {
+                    Timber.e(e)
+                }
             })
     }
 
